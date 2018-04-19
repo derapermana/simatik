@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <h1>Try Git</h1>
+
     <form class="form form-horizontal" method="post" action="{{ \Request::url() }}">
         <div class="form-body">
             @csrf
