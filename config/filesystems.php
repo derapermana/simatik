@@ -64,15 +64,20 @@ return [
             'url' => env('AWS_URL'),
         ],
 
-        'webdav' => [
-            'driver'     => 'webdav',
-            'baseUri'    => 'http://simpandata.kemdikbud.go.id/remote.php/webdav/',
-            'userName'   => 'dera',
-            'password'   => 'dera2015',
-            // 'visibility' => 'public',
-            // 'pirate'     => false,
-            // 'eventable'  => true,
-            // 'cache'      => 'foo'
+        'sftp' => [
+            'driver' => 'sftp',
+            'host' => '118.98.221.148',
+            'username' => 'root',
+            'password' => 'PGd1kmen@!',
+
+            // Settings for SSH key based authentication...
+            // 'privateKey' => '/path/to/privateKey',
+            // 'password' => 'encryption-password',
+
+            // Optional SFTP Settings...
+            'port' => 22,
+            'root' => '/home/dera/',
+            // 'timeout' => 30,
         ],
 
     ],
