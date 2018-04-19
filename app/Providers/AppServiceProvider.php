@@ -18,6 +18,11 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         View::share('all_institutions', 'App\Institution'::all());
+        Storage::extend('webdav', function($app, $config) {
+            $client = new Client($config);
+            $adapter = new WebDAVAdapter($client);
+            return new Filesystem($adapter);
+        });
     }
 
     /**
