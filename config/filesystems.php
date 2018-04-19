@@ -64,6 +64,17 @@ return [
             'url' => env('AWS_URL'),
         ],
 
+        'webdav' => [
+            'driver'     => 'webdav',
+            'baseUri'    => 'http://simpandata.kemdikbud.go.id/remote.php/webdav/',
+            'userName'   => 'dera',
+            'password'   => 'dera2015',
+            // 'visibility' => 'public',
+            // 'pirate'     => false,
+            // 'eventable'  => true,
+            // 'cache'      => 'foo'
+        ],
+
     ],
 
 ];
